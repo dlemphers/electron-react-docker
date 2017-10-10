@@ -10,4 +10,4 @@ run-dev:
 		-e DISPLAY=$$DISPLAY \
 		-p 3000:3000 \
 		electron-react-docker \
-		bash
+		npm run dev
