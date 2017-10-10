@@ -1,4 +1,7 @@
 # electron-react-docker
+
+<img src="https://img.shields.io/docker/build/dlemphers/electron-react-docker.svg"></img>
+
 This project is for developing React apps inside of a Docker container using TypeScript. 
 
 ## Getting Started
