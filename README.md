@@ -3,15 +3,27 @@ This project is for developing React apps inside of a Docker container using Typ
 
 ## Getting Started
 
-The makefile has two targets:
+**On first run**:
 
-- build-container-image
+`make npm-update`
 
-This will build the docker image locally and tag it electron-react-docker:latest.
+This will setup the node_modules directory for you.
 
-- run-dev
+**On subsequent runs**:
 
-This will run the docker container, mount your project folder so any changes you make will live reload inside the container and also plumb through your local X11 so Electron renders on your local machine
+`make run-dev`
+
+This will run the react app on the internal port 3000 then start Electron.
+
+There is a slight lag between the react app being ready and electron firing up, so if electron opens with a blank window simply refresh the browser. 
+
+## Using the container
+
+The container performs the following mount:
+
+`-v $pwd/app:/app`
+
+However, you can simply run the container and mount your own project folder and just use the container as a development host. 
 
 ## Things you should know
 

@@ -1,5 +1,9 @@
-build-container-image:
-	docker build --rm -t electron-react-docker:latest -f .docker/base .docker
+npm-update:
+	docker run -ti --rm \
+		-v `pwd`/app:/app \
+		-w /app \
+		dlemphers/electron-react-docker \
+		npm update
 
 run-dev:
 	xhost +local:docker
@@ -9,5 +13,5 @@ run-dev:
 		-w /app \
 		-e DISPLAY=$$DISPLAY \
 		-p 3000:3000 \
-		electron-react-docker \
+		dlemphers/electron-react-docker \
 		npm run dev
