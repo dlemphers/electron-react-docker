@@ -7,7 +7,7 @@ The makefile has two targets:
 
 - build-container-image
 
-This will build the docker image locally and tag it electron-react-docker:latest
+This will build the docker image locally and tag it electron-react-docker:latest.
 
 - run-dev
 
