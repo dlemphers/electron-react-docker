@@ -1,2 +1,3 @@
 # electron-react-docker
-Dockerized Electron React Seed
+This project is for developing React apps inside of a Docker container using TypeScript. 
+
