@@ -1,6 +1,5 @@
 <p align="center">
-<img src="docs/images/logo.png"
-style="max-height:200px !important"></img>
+<img src="docs/images/logo.png" width="200px"></img>
 </p>
 
 # electron-react-typescript-docker
