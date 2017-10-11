@@ -1,3 +1,5 @@
+PROJECT_FOLDER = `pwd`/app:/app
+
 npm-update:
 	docker run -ti --rm \
 		-v `pwd`/app:/app \
@@ -9,7 +11,7 @@ run-dev:
 	xhost +local:docker
 	docker run -ti --rm \
 		-v /tmp/.X11-unix:/tmp/.X11-unix \
-		-v `pwd`/app:/app \
+		-v $(PROJECT_FOLDER) \
 		-w /app \
 		-e DISPLAY=$$DISPLAY \
 		-p 3000:3000 \

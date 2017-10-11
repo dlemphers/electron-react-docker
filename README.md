@@ -28,6 +28,21 @@ The container performs the following mount:
 
 However, you can simply run the container and mount your own project folder and just use the container as a development host. 
 
+`make run-dev -e PROJECT_FOLDER=<insert_your_project_folder_here>`
+
+Or if you just want to use the docker container without pulling this repo:
+
+First run:
+
+`xhost +local:docker`
+
+then:
+
+`docker run -ti --rm -v tmp/.X11-unix:/tmp/.X11-unix -v $(PROJECT_FOLDER) -w /app -e DISPLAY=$$DISPLAY  dlemphers/electron-react-docker npm run dev
+`
+
+`$(PROJECT_FOLDER)` is the location to your Electron project.
+
 ## Things you should know
 
 This passes the X11 display handle to the container so the container process for Electron is rendered on your machine. This currently only works on Linux.
