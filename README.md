@@ -1,3 +1,8 @@
+<p align="center">
+<img src="docs/images/logo.png"
+style="max-height:200px !important"></img>
+</p>
+
 # electron-react-typescript-docker
 
 <img src="https://img.shields.io/docker/build/dlemphers/electron-react-docker.svg"></img>
